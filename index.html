@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan My Travel &mdash; Day-by-Day City Itineraries Worldwide</title>
+<meta name="description" content="Free day-by-day travel itineraries for cities worldwide. Pick a destination and get a complete plan with accommodation, dining and transit strategies.">
+<link rel="canonical" href="https://publicationsholiday-design.github.io/Planmytravel-site/index.html">
+<meta name="robots" content="index, follow">
+
+<style>
+  :root{
+    --ink:#1A2B3C;--teal:#1A7A6E;--teal-light:#4ECDC4;--amber:#E8862B;
+    --paper:#FBF9F5;--card:#FFFFFF;--line:#E7E1D8;--muted:#5C6770;--maxw:760px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.7;font-size:18px}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  header.hero{background:linear-gradient(160deg,#1A535C 0%,#1A7A6E 60%,#4ECDC4 130%);color:#fff;padding:64px 0 56px;text-align:center}
+  .eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:700;opacity:.85;margin-bottom:18px}
+  header.hero h1{font-size:40px;line-height:1.15;font-weight:700;max-width:620px;margin:0 auto 16px}
+  header.hero p.sub{font-size:18px;opacity:.92;max-width:520px;margin:0 auto;font-style:italic}
+  .facts{display:flex;flex-wrap:wrap;justify-content:center;background:var(--card);border:1px solid var(--line);border-radius:14px;margin:-28px auto 0;max-width:640px;overflow:hidden;box-shadow:0 8px 30px rgba(26,43,60,.08);position:relative;z-index:2}
+  .facts div{flex:1 1 33%;padding:18px 12px;text-align:center;border-right:1px solid var(--line)}
+  .facts div:last-child{border-right:none}
+  .facts .k{font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+  .facts .v{font-size:19px;font-weight:700;color:var(--teal)}
+  main{padding:48px 0 20px}
+  .intro{font-size:19px;margin-bottom:14px}
+  .intro strong{color:var(--teal)}
+  h2{font-size:28px;margin:46px 0 6px;line-height:1.2;padding-top:14px}
+  h2 .daytag{display:inline-block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;font-weight:700;letter-spacing:.05em;background:var(--teal);color:#fff;border-radius:30px;padding:4px 13px;margin-right:10px;vertical-align:middle}
+  h2 .theme{color:var(--muted);font-style:italic;font-size:18px;font-weight:400;display:block;margin-top:4px}
+  h3{font-size:21px;margin:30px 0 4px;color:var(--ink)}
+  .time{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;color:var(--amber);font-size:14px;letter-spacing:.04em;margin-top:22px}
+  p{margin:10px 0}
+  .strategy{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:22px 0}
+  .strategy h3{margin-top:0;color:var(--teal);font-size:20px}
+  .tier{margin:14px 0}.tier b{color:var(--ink)}
+  .budgetgrid{display:flex;flex-wrap:wrap;gap:14px;margin-top:6px}
+  .budgetgrid .b{flex:1 1 30%;min-width:150px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .budgetgrid .b .lvl{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  .budgetgrid .b .amt{font-size:24px;font-weight:700;color:var(--amber);margin:2px 0 4px}
+  .budgetgrid .b small{color:var(--muted);font-size:14px;line-height:1.4;display:block}
+  .cta{background:linear-gradient(135deg,#1A535C,#1A7A6E);color:#fff;border-radius:18px;padding:34px 30px;text-align:center;margin:46px 0 20px}
+  .cta h3{color:#fff;font-size:24px;margin-bottom:8px}
+  .cta p{opacity:.92;max-width:460px;margin:0 auto 20px}
+  .cta a{display:inline-block;background:var(--amber);color:#fff;text-decoration:none;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;padding:15px 34px;border-radius:40px;font-size:16px;transition:transform .15s,box-shadow .15s}
+  .cta a:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+  .cta .note{font-size:13px;opacity:.8;margin-top:14px}
+  .faq{margin:40px 0}.faq h2{margin-bottom:10px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin:12px 0}
+  details summary{font-weight:700;cursor:pointer;font-size:18px;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";color:var(--teal);font-size:24px}
+  details[open] summary::after{content:"\2013"}
+  details p{margin-top:12px;color:var(--muted)}
+  .related{border-top:1px solid var(--line);margin-top:40px;padding-top:26px}
+  .related h3{color:var(--teal)}.related ul{list-style:none;margin-top:10px}
+  .related li{margin:8px 0}
+  .related a{color:var(--teal);text-decoration:none;font-weight:700;border-bottom:1px solid var(--teal-light)}
+  .related a:hover{color:var(--amber);border-color:var(--amber)}
+  footer{background:#1A2B3C;color:#9FB0BC;text-align:center;padding:30px 20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;margin-top:40px}
+  footer a{color:var(--teal-light);text-decoration:none}
+  @media(max-width:600px){header.hero h1{font-size:30px}body{font-size:17px}h2{font-size:24px}
+    .facts div{flex:1 1 100%;border-right:none;border-bottom:1px solid var(--line)}.facts div:last-child{border-bottom:none}}
+</style>
+
+<style>
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:30px}
+  .citycard{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;transition:transform .15s,box-shadow .15s}
+  .citycard:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(26,43,60,.1)}
+  .cc-city{font-size:22px;font-weight:700;color:var(--ink)}
+  .cc-country{font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--teal);margin:4px 0 10px}
+  .cc-meta{font-family:'Helvetica Neue',Arial,sans-serif;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Plan My Travel</div>
+    <h1>Day-by-Day Itineraries for Cities Worldwide</h1>
+    <p class="sub">Pick a destination and get a complete plan &mdash; what to see, where to stay, and how to get around.</p>
+  </div>
+</header>
+<main class="wrap">
+  <p class="intro" style="text-align:center;margin-top:30px">Choose a city below for a full day-by-day itinerary. Every plan includes accommodation, dining and transit strategies for every budget.</p>
+  <div class="grid">
+      <a class="citycard" href="shanghai-china-3-day-itinerary.html">
+        <span class="cc-city">Shanghai</span>
+        <span class="cc-country">China</span>
+        <span class="cc-meta">3-day plan &middot; from $250/day</span>
+      </a>
+      <a class="citycard" href="cairo-egypt-3-day-itinerary.html">
+        <span class="cc-city">Cairo</span>
+        <span class="cc-country">Egypt</span>
+        <span class="cc-meta">3-day plan &middot; from $450/day</span>
+      </a>
+      <a class="citycard" href="paris-3-day-itinerary.html">
+        <span class="cc-city">Paris</span>
+        <span class="cc-country">France</span>
+        <span class="cc-meta">3-day plan &middot; from $203/day</span>
+      </a>
+      <a class="citycard" href="munich-germany-3-day-itinerary.html">
+        <span class="cc-city">Munich</span>
+        <span class="cc-country">Germany</span>
+        <span class="cc-meta">3-day plan &middot; from $350/day</span>
+      </a>
+      <a class="citycard" href="agra-india-3-day-itinerary.html">
+        <span class="cc-city">Agra</span>
+        <span class="cc-country">India</span>
+        <span class="cc-meta">3-day plan &middot; from $250/day</span>
+      </a>
+      <a class="citycard" href="bali-indonesia-3-day-itinerary.html">
+        <span class="cc-city">Bali</span>
+        <span class="cc-country">Indonesia</span>
+        <span class="cc-meta">3-day plan &middot; from $250/day</span>
+      </a>
+      <a class="citycard" href="tokyo-japan-3-day-itinerary.html">
+        <span class="cc-city">Tokyo</span>
+        <span class="cc-country">Japan</span>
+        <span class="cc-meta">3-day plan &middot; from $250/day</span>
+      </a>
+      <a class="citycard" href="casablanca-morocco-3-day-itinerary.html">
+        <span class="cc-city">Casablanca</span>
+        <span class="cc-country">Morocco</span>
+        <span class="cc-meta">3-day plan &middot; from $250/day</span>
+      </a>
+      <a class="citycard" href="las-vegas-united-states-3-day-itinerary.html">
+        <span class="cc-city">Las Vegas</span>
+        <span class="cc-country">United States</span>
+        <span class="cc-meta">3-day plan &middot; from $550/day</span>
+      </a>
+      <a class="citycard" href="orlando-united-states-3-day-itinerary.html">
+        <span class="cc-city">Orlando</span>
+        <span class="cc-country">United States</span>
+        <span class="cc-meta">3-day plan &middot; from $250/day</span>
+      </a>
+      <a class="citycard" href="washington-dc-united-states-3-day-itinerary.html">
+        <span class="cc-city">Washington DC</span>
+        <span class="cc-country">United States</span>
+        <span class="cc-meta">3-day plan &middot; from $250/day</span>
+      </a></div>
+
+  <div class="cta">
+    <h3>Plan any trip in seconds</h3>
+    <p>Get instant day-by-day itineraries for 150+ cities in the Plan My Travel app. Free 2-day preview for every destination.</p>
+    <a href="#" onclick="goToStore(event)">Get the free app</a>
+    <div class="note">Free 2-day itinerary for every city &middot; Upgrade for full 3 &amp; 5-day plans</div>
+  </div>
+</main>
+<footer>
+  <p>Plan My Travel &middot; Instant day-by-day itineraries for 150+ cities worldwide.<br>
+  <a href="#" onclick="goToStore(event)">Get the app</a></p>
+</footer>
+
+<script>
+function goToStore(e){
+  if(e) e.preventDefault();
+  var ua=navigator.userAgent||"";
+  var android=/Android/.test(ua);
+  window.location.href = android ? "https://play.google.com/store/apps/details?id=game.planmytravel.plan_my_travel" : "https://apps.apple.com/us/app/plan-my-travel-itinerary/id6775488087";
+}
+</script>
+
+</body>
+</html>
