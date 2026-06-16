@@ -7,14 +7,14 @@
 <!-- ============ SEO META (edit URLs to your real domain) ============ -->
 <title>3-Day Paris Itinerary (2026): A Complete Day-by-Day Plan</title>
 <meta name="description" content="A complete 3-day Paris itinerary for first-time visitors: the Louvre, Eiffel Tower, Montmartre and Versailles, plus where to stay, eat, and how to get around on any budget.">
-<link rel="canonical" href="https://YOUR-USERNAME.github.io/planmytravel/paris-3-day-itinerary.html">
+<link rel="canonical" href="https://publicationsholiday-design.github.io/Planmytravel-site/paris-3-day-itinerary.html">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph / social share -->
 <meta property="og:type" content="article">
 <meta property="og:title" content="3-Day Paris Itinerary (2026): A Complete Day-by-Day Plan">
 <meta property="og:description" content="The Louvre, Eiffel Tower, Montmartre and Versailles in three days — with stay, food and transit tips for every budget.">
-<meta property="og:url" content="https://YOUR-USERNAME.github.io/planmytravel/paris-3-day-itinerary.html">
+<meta property="og:url" content="https://publicationsholiday-design.github.io/Planmytravel-site/paris-3-day-itinerary.html">
 
 <!-- ============ STRUCTURED DATA: TouristTrip ============ -->
 <script type="application/ld+json">
@@ -323,7 +323,7 @@
   <div class="cta">
     <h3>Want this plan in your pocket?</h3>
     <p>Get this full Paris itinerary — with maps, calendar sync and offline access — free in the Plan My Travel app. Every city includes a free 2-day preview.</p>
-    <a href="#">Get the free app</a>
+    <a href="#" onclick="goToStore(event)">Get the free app</a>
     <div class="note">Free 2-day itinerary for every city · Upgrade for full 3 &amp; 5-day plans</div>
   </div>
 
@@ -365,9 +365,24 @@
 </main>
 
 <footer>
-  <p>Plan My Travel · Instant day-by-day itineraries for cities worldwide.<br>
-  <a href="#">Get the app</a> · <a href="index.html">All destinations</a></p>
+  <p>Plan My Travel · Instant day-by-day itineraries for 150+ cities worldwide.<br>
+  <a href="#" onclick="goToStore(event)">Get the app</a> · <a href="index.html">All destinations</a></p>
 </footer>
-
+<script>
+function goToStore(e){
+  if(e) e.preventDefault();
+  var ua = navigator.userAgent || "";
+  var ios = /iPad|iPhone|iPod/.test(ua);
+  var android = /Android/.test(ua);
+  if(ios){
+    window.location.href = "https://apps.apple.com/us/app/plan-my-travel-itinerary/id6775488087";
+  } else if(android){
+    window.location.href = "https://play.google.com/store/apps/details?id=game.planmytravel.plan_my_travel";
+  } else {
+    // Desktop: send to App Store by default (change if you prefer Play)
+    window.location.href = "https://apps.apple.com/us/app/plan-my-travel-itinerary/id6775488087";
+  }
+}
+</script>
 </body>
 </html>
