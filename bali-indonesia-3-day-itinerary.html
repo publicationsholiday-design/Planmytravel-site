@@ -88,7 +88,25 @@
   html{scroll-behavior:smooth}
   body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--paper);line-height:1.7;font-size:18px}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
-  header.hero{background:linear-gradient(160deg,#1A535C 0%,#1A7A6E 60%,#4ECDC4 130%);color:#fff;padding:64px 0 56px;text-align:center}
+  header.hero{background:linear-gradient(160deg,rgba(26,83,92,.86) 0%,rgba(26,122,110,.82) 55%,rgba(78,205,196,.72) 130%),url("hero-bg.jpg") center/cover no-repeat;color:#fff;padding:64px 0 56px;text-align:center}
+  /* email signup */
+  .signup{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 28px;margin:46px 0 20px;text-align:center}
+  .signup h3{color:var(--teal);font-size:22px;margin-bottom:6px}
+  .signup p{color:var(--muted);max-width:440px;margin:0 auto 18px;font-size:16px}
+  .signup form{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:460px;margin:0 auto}
+  .signup input[type=email]{flex:1 1 240px;padding:13px 16px;border:1px solid var(--line);border-radius:40px;font-size:16px;font-family:inherit;color:var(--ink)}
+  .signup button{background:var(--amber);color:#fff;border:none;border-radius:40px;padding:13px 28px;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:15px;cursor:pointer;transition:transform .15s}
+  .signup button:hover{transform:translateY(-2px)}
+  .signup .ok{display:none;color:var(--teal);font-weight:700;margin-top:8px}
+  .signup .small{font-size:12px;color:var(--muted);margin-top:12px}
+  /* cross-promo */
+  .crosspromo{border-top:1px solid var(--line);margin-top:10px;padding:26px 0 0}
+  .crosspromo h3{color:var(--teal);font-size:18px;text-align:center;margin-bottom:14px}
+  .cp-grid{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .cp-grid a{flex:1 1 150px;max-width:200px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;text-align:center;transition:transform .15s,box-shadow .15s}
+  .cp-grid a:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(26,43,60,.08)}
+  .cp-grid .cp-name{display:block;font-weight:700;color:var(--ink);font-size:15px}
+  .cp-grid .cp-tag{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);margin-top:3px}
   .eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:700;opacity:.85;margin-bottom:18px}
   header.hero h1{font-size:40px;line-height:1.15;font-weight:700;max-width:620px;margin:0 auto 16px}
   header.hero p.sub{font-size:18px;opacity:.92;max-width:520px;margin:0 auto;font-style:italic}
@@ -240,11 +258,32 @@
       <p>The itinerary above includes a transit strategy for Bali across budget, mid-range and luxury options &mdash; from public transport to private transfers.</p></details>
   </section>
 
+  
+  <div class="signup">
+    <h3>Get new city itineraries &amp; travel tips</h3>
+    <p>Be the first to know when we add new destinations and trip-planning guides. No spam, unsubscribe anytime.</p>
+    <form action="https://assets.mailerlite.com/jsonp/2451268/forms/190497310709384708/subscribe" method="post" target="ml_iframe" onsubmit="setTimeout(function(){document.getElementById('ml-ok').style.display='block';},600)">
+      <input type="email" name="fields[email]" placeholder="Your email address" autocomplete="email" required>
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="ok" id="ml-ok">Thanks! Please check your inbox to confirm.</div>
+    <div class="small">Powered by MailerLite &middot; we never share your email.</div>
+  </div>
+  <iframe name="ml_iframe" style="display:none"></iframe>
+
+
   <div class="related">
     <h3>More city itineraries</h3>
     <ul>
       <li><a href="index.html">&larr; Browse all destinations</a></li>
     </ul>
+  </div>
+  
+  <div class="crosspromo">
+    <h3>More from our studio</h3>
+    <div class="cp-grid"><a href="https://apps.apple.com/us/app/all-in-one-recipes-cookbook/id6773658362"><span class="cp-name">All-in-One Recipes Cookbook</span><span class="cp-tag">700+ recipes &amp;middot; iOS app</span></a><a href="https://www.amazon.com/stores/author/B0F28R1F5G/allbooks"><span class="cp-name">Puzzle Books on Amazon</span><span class="cp-tag">Brain teasers &amp;amp; fun</span></a><a href="#"><span class="cp-name">Plan My Day</span><span class="cp-tag">Coming soon</span></a></div>
   </div>
 </main>
 
